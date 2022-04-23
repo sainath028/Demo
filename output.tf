@@ -1,6 +1,7 @@
 output "key" {
   description = "ssh key"
   value       = tls_private_key.myprvtkey.private_key_pem
+  sensitive = true
 }
 
 output "id" {
