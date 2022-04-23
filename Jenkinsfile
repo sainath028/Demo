@@ -8,12 +8,12 @@ pipeline {
         )
     }
     stages {
-        stage('git clone') {
-            steps {
-              git branch: 'master', credentialsId: 'password',url: "https://github.com.git" 
-              sh "ls -ll"
-            }
-        }
+//         stage('git clone') {
+//             steps {
+//               git branch: 'master', credentialsId: 'password',url: "https://github.com.git" 
+//               sh "ls -ll"
+//             }
+//         }
         
         stage('terraform init') {
             steps {
