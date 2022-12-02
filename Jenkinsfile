@@ -41,12 +41,11 @@ pipeline {
             }
         }
         
-//         stage('ansible playbook') {
-//             steps {
-//                 sh "ls -ll && pwd"
-                
-//               sh "ansible-playbook ansible.yml -vvvvv"
-//             }
-//         }
+        stage('ansible playbook') {
+            steps {
+              sh "ls -ll && pwd"  
+              sh 'ansible-playbook ansible.yml -vvvvv --extra-vars "jobname=$JOB_NAME"'
+             }
+         }
     }
 }
