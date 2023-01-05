@@ -41,12 +41,12 @@ pipeline {
             }
         }
         
-//         stage('ansible playbook') {
-//             steps {
-//                 sh "ls -ll && pwd"
+        stage('ansible playbook') {
+            steps {
+                sh "ls -ll && pwd"
                 
-//               sh "ansible-playbook ansible.yml -vvvvv"
-//             }
-//         }
+              sh "ansible-playbook ansible.yml -vvvvv"
+            }
+        }
     }
 }
